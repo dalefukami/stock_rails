@@ -1,0 +1,12 @@
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :email, "Enter your email" %>
+    <%= f.text_field :email, {:id => 'email'} %>
+  </p>
+  <p>
+    <%= f.label :password, "Enter your password" %>
+    <%= f.password_field :password, {:id => 'password'} %>
+  </p>
+
+  <%= f.submit "Register", {:id => 'submit'} %>
+<% end %>
