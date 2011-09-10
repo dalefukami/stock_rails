@@ -1,4 +1,15 @@
 <%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <p>
     <%= f.label :email, "Enter your email" %>
     <%= f.text_field :email, {:id => 'email'} %>
@@ -6,6 +17,10 @@
   <p>
     <%= f.label :password, "Enter your password" %>
     <%= f.password_field :password, {:id => 'password'} %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, "Please confirm your password" %>
+    <%= f.password_field :password_confirmation, {:id => 'password_confirmation'} %>
   </p>
 
   <%= f.submit "Register", {:id => 'submit'} %>
