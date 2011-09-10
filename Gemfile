@@ -36,6 +36,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'guard-spork'
+  gem 'spork', '~> 0.9.0.rc'
   gem 'capybara'
   gem 'factory_girl_rails'
 end

@@ -63,6 +63,9 @@ GEM
       thor (~> 0.14.6)
     guard-rspec (0.4.4)
       guard (>= 0.4.0)
+    guard-spork (0.2.1)
+      guard (>= 0.2.2)
+      spork (>= 0.8.4)
     hike (1.2.1)
     i18n (0.6.0)
     jquery-rails (1.0.14)
@@ -128,6 +131,7 @@ GEM
       ffi (>= 1.0.7)
       json_pure
       rubyzip
+    spork (0.9.0.rc9)
     sprockets (2.0.0)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -157,10 +161,12 @@ DEPENDENCIES
   factory_girl_rails
   guard
   guard-rspec
+  guard-spork
   jquery-rails
   rails (= 3.1.0)
   rspec-rails
   sass-rails (~> 3.1.0)
+  spork (~> 0.9.0.rc)
   sqlite3
   turn
   uglifier
