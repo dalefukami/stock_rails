@@ -58,6 +58,8 @@ StockRails::Application.routes.draw do
 
 
   get "register" => 'users#new', :as => 'register'
+  get "login" => 'sessions#new', :as => 'login'
   resources :users
+  resources :sessions
   root :to => 'users#new'
 end
